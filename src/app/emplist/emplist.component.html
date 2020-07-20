@@ -1,0 +1,31 @@
+<div clas="container">
+    <h2 clas="center">Employee List</h2>
+    <br>
+    <div class="row">
+        <div class="col-md-10 m-2">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">First Name</th>
+                        <th scope="col">Last Name</th>
+                        <th scope="col">Age</th>
+                        <th scope="col">Edit</th>
+                        <th scope="col">Delete</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let emp of emplist">
+                        <td>{{emp.id}}</td>
+                        <td>{{emp.user.first_name}}</td>
+                        <td>{{emp.user.last_name}}</td>
+                        <td>{{emp.emp_age}}</td>
+                        <td><button type="button" class="btn btn-warning" (click)="editEmp(emp.id)">Update</button></td>
+                        <td>
+                            <button type="button" class="btn btn-danger" (click)="removeEmp(emp.id)">Delete</button>
+                        </td>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,10 @@
+<div class="row m-5">
+    <div class="col-md-1">
+    </div>
+    <div class="col-md-5">
+        <app-empform (empsubmitted)="setId($event)"></app-empform>
+    </div>
+    <div class="col-md-6">
+        <app-emplist (editEvent)="empformevent($event)" (empId)="selectedId"></app-emplist>
+    </div>
+</div>

@@ -1,0 +1,23 @@
+<div class="container">
+    <h2>Employee Form</h2>
+    <br>
+    <form [formGroup]="empform" (ngSubmit)="addUpdateEmployee()">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="fname">First Name</label>
+                    <input id="fname" type="text" class="form-control" formControlName="first_name">
+                </div>
+                <div class="form-group">
+                    <label for="lname">Last Name</label>
+                    <input id="lname" type="text" class="form-control" formControlName="last_name">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Age</label>
+                    <input id="age" type="number" class="form-control" formControlName="age">
+                </div>
+                <button type="submit" class="btn btn-primary float-right" [disabled]="!empform.valid">{{isupdate ? "update" : "submit"}}</button>
+            </div>
+        </div>
+    </form>
+</div>
